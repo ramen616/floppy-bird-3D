@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class BirdController : MonoBehaviour
 {
@@ -25,6 +26,7 @@ public class BirdController : MonoBehaviour
     // 障害物に衝突したときの処理
     void OnCollisionEnter(Collision collision)
     {
-            Destroy(gameObject);
+        // ゲームのメインシーンをロードします（例: "MainScene"）
+        SceneManager.LoadScene("GameoverScene");
  }
 }
